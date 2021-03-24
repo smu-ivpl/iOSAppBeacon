@@ -8,34 +8,34 @@ Xcode development tool and [CoreBluetooth](https://developer.apple.com/library/a
 
 ![class](images/class_diag.png)
 
-#####AppDelegate  
+##### AppDelegate  
 This class receives callbacks for the execution and termination of an app, entering the background state, or reactivating.
 
-#####CBCentralManager  
+##### CBCentralManager  
 This class is responsible for `central` function in CoreBluetooth.
 
-#####CBPeripheral  
+##### CBPeripheral  
 This class is in charge of `peripheral` functions in CoreBluetooth.
 
-#####LPManager  
+##### LPManager  
 `CBHelper` in charge of interaction with beacons and a class that manages interactions between various views. The `LPManager` is assigned with app execution and is shared among all views until the app is closed.
 
-#####CBHelper  
+##### CBHelper  
 It includes `CBCentralManager` and `CBPeripheral` in charge of CoreBluetooth function, and receives their callbacks.
 
-#####CBHelperDelegate  
+##### CBHelperDelegate  
 When `CBHelper` receives a callback delivered from a `CBCentralManager`, that is, a device that performs a central function, or a `CBPeripheral`, that is, a beacon device, it generates an event of `CBHelperDelegate` so that each view controller can perform processing logic according to the event.
 
-#####MainViewController  
+##### MainViewController  
 Handles the app's main screen.
 
-#####ScanViewController  
+##### ScanViewController  
 Scan the beacon and make the connection.
 
-#####EditViewController  
+##### EditViewController  
 Set the alarm sound of the connected beacon or `central` device.
 
-#####ConnectionViewController  
+##### ConnectionViewController  
 Displays the information of the connected beacon device.
 
 
